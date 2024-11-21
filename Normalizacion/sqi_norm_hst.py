@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-def self_quotient_image(image, filter_size=30, epsilon=1e-6):
+def self_quotient_image(image, filter_size=30, epsilon=1.5):
     # Asegurarse de que filter_size es impar
     if filter_size <= 0 or filter_size % 2 == 0:
         filter_size = max(3, filter_size | 1)  # Convertir a un número impar positivo mínimo 3
@@ -19,7 +19,7 @@ def self_quotient_image(image, filter_size=30, epsilon=1e-6):
     return sqi_normalized.astype(np.uint8)
 
 # Cargar imagen de entrada (escala de grises)
-image_path = "chino.jpg"  # Cambia esta ruta por la de tu imagen
+image_path = "yale4.bmp"  # Cambia esta ruta por la de tu imagen
 image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
 if image is None:

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Leer la imagen
-img = cv2.imread('chino.jpg')
+img = cv2.imread('tarea/chino.jpg')
 
 # Convertir a escala de grises
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
