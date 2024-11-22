@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-def local_normalization(image, window_size=5, epsilon=1e-6):
+def local_normalization(image, window_size=5, epsilon=1.5):
     # Convertir la imagen a flotante para cálculos precisos
     image_float = image.astype(np.float32)
     

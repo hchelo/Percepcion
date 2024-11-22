@@ -19,7 +19,7 @@ def self_quotient_image(image, filter_size=30, epsilon=1.5):
     return sqi_normalized.astype(np.uint8)
 
 # Cargar imagen de entrada (escala de grises)
-image_path = "yale4.bmp"  # Cambia esta ruta por la de tu imagen
+image_path = "tarea/chino.jpg"  # Cambia esta ruta por la de tu imagen
 image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
 if image is None:
