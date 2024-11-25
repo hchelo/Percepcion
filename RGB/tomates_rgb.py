@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Ruta de la imagen
-imagen_path = 'RGB/Tomates.jpg'  # Actualiza esta línea con la ruta correcta
+imagen_path = 'Tomates.jpg'  # Actualiza esta línea con la ruta correcta
 
 # Leer la imagen
 img = cv2.imread(imagen_path)
@@ -25,7 +25,7 @@ else:
         for x in range(width):
             b, g, r = img_filtered[y, x]
             if (r < 250) and (r >= 154) and (g < 120) and (g >= 0) and (b < 42) and (r >= 2) :
-                img_filtered[y, x] = (0, 0, 255)  # Rojo para las áreas detectadas
+                img_filtered[y, x] = (255, 0,0 )  # Rojo para las áreas detectadas
             else:
                 img_filtered[y, x] = (0, 0, 0)  # Negro para el resto
 

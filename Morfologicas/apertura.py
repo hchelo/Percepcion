@@ -6,10 +6,12 @@ import matplotlib.pyplot as plt
 image = cv2.imread("img_morfo/dactilar.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Crear un kernel para la apertura
-kernel = np.ones((5, 5), np.uint8)  # Kernel de 5x5 de unos
+kernel = np.ones((6, 6), np.uint8)  # Kernel de 5x5 de unos
 
 # Aplicar operación de apertura
 opened_image = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+
+
 
 # Mostrar la imagen original y la imagen con apertura
 plt.figure(figsize=(10, 5))
