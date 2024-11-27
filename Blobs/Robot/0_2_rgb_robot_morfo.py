@@ -28,7 +28,7 @@ kernel = np.ones((3, 3), np.uint8)  # Kernel de 5x5
 # Realizar la erosión
 erosion = cv2.erode(img, kernel, iterations=1)
 # Realizar la dilatación
-kernel = np.ones((5, 5), np.uint8)  # Kernel de 5x5
+kernel = np.ones((50, 50), np.uint8)  # Kernel de 5x5
 dilatation = cv2.dilate(erosion, kernel, iterations=1)
 img=dilatation
 

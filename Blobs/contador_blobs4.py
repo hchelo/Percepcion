@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Leer la imagen en escala de grises
-im = cv2.imread("blobs2.jpg", cv2.IMREAD_GRAYSCALE)
+im = cv2.imread("blobs6.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Umbralizar la imagen para que los objetos blancos sean separados del fondo negro
 _, thresholded_image = cv2.threshold(im, 57, 255, cv2.THRESH_BINARY)

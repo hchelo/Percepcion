@@ -9,4 +9,3 @@ video_path = 'futbol.mp4'
 detector_pelota(video_path)
 
 # Usar las coordenadas de la pelota en el programa principal
-s

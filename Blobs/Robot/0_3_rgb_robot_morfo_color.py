@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Ruta al archivo de imagen
-archivo_imagen = 'soccer4.jpg'  # Actualiza esta línea con la ruta correcta del archivo de imagen
+archivo_imagen = 'soccer1.jpg'  # Actualiza esta línea con la ruta correcta del archivo de imagen
 
 # Leer la imagen
 img = cv2.imread(archivo_imagen)

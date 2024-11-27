@@ -47,7 +47,7 @@ def detector_pelota(video_path):
             cv2.putText(frame, "Pelota", (int(x-radius), int(y-radius)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
             #return int(x)
         # Mostrar el cuadro resultante
-        cv2.imshow('Video', frame)
+        cv2.imshow('Video', mask)
         
         # Detener la ejecución del bucle si se presiona la tecla 'q'
         if cv2.waitKey(1) & 0xFF == ord('q'):
