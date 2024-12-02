@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
 # Cargar las imágenes y convertirlas a escala de grises
-img1 = cv2.imread('fanta.jpg')
+img1 = cv2.imread('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg')
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 
-img2 = cv2.imread('fantaB.png')
+img2 = cv2.imread('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fantaB.png')
 gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
 # Crear el objeto SIFT

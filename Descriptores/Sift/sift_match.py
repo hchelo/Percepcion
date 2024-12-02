@@ -1,8 +1,8 @@
 import cv2
 
 # Cargar imágenes
-img1 = cv2.imread('fanta.jpg')
-img2 = cv2.imread('fantaB.png')
+img1 = cv2.imread('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg')
+img2 = cv2.imread('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fantaB.png')
 
 # Convertir a escala de grises
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)

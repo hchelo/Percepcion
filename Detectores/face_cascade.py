@@ -26,7 +26,7 @@ def filter_overlapping_detections(profiles, faces, overlap_threshold=0.5):
         if not any(compute_overlap(profile, face) > overlap_threshold for face in faces)
     ]
 
-path_to_image = "face_nor/amigos.png"
+path_to_image = "face_rot/familia.png"
 original_image = cv2.imread(path_to_image)
 
 if original_image is not None:

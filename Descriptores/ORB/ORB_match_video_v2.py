@@ -3,8 +3,8 @@ import os
 import numpy as np
 
 # Ruta de la imagen y el video
-ruta_imagen = 'fanta.jpg'
-ruta_video = 'fanta3.mp4'
+ruta_imagen = 'C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg'
+ruta_video = 'C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta3.mp4'
 
 # Verificar si la imagen y el video existen
 if not os.path.exists(ruta_imagen):

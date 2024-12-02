@@ -3,7 +3,7 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 
 # Cargar imagen en color y en escala de grises
-img = cv.imread('fanta.jpg')
+img = cv.imread('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg')
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 # Iniciar el detector ORB

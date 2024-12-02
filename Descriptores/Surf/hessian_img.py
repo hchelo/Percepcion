@@ -31,7 +31,7 @@ def calcular_hessiana(imagen, sigma=1):
     return hessiana
 
 # Cargar la imagen pepe.jpg
-imagen = io.imread("fanta.jpg")
+imagen = io.imread("C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg")
 if len(imagen.shape) == 3:  # Si la imagen tiene 3 canales, convertirla a escala de grises
     imagen = color.rgb2gray(imagen)
 

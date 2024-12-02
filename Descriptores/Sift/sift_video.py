@@ -1,7 +1,7 @@
 import cv2
 
 # Cargar la imagen y convertirla a escala de grises
-img = cv2.imread('fanta.jpg')
+img = cv2.imread('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg')
 factor_de_escala = 0.1  # Cambia esto según lo pequeño que quieras hacer la imagen, por ejemplo 0.5 es 50%
 ancho_nuevo = int(img.shape[1] * factor_de_escala)
 alto_nuevo = int(img.shape[0] * factor_de_escala)
@@ -15,7 +15,7 @@ sift = cv2.SIFT_create()
 kp_img, des_img = sift.detectAndCompute(gray, None)
 
 # Crear objeto VideoCapture para cargar el video
-cap = cv2.VideoCapture('fanta3.mp4')
+cap = cv2.VideoCapture('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta3.mp4')
 
 while True:
     # Leer un frame del video

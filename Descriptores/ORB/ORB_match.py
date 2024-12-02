@@ -2,8 +2,8 @@ import cv2
 import os
 
 # Rutas de las imágenes
-ruta_img1 = 'fanta.jpg'
-ruta_img2 = 'fantaB.png'
+ruta_img1 = 'C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg'
+ruta_img2 = 'C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fantaB.png'
 
 # Verificar si las imágenes existen
 if not os.path.exists(ruta_img1) or not os.path.exists(ruta_img2):

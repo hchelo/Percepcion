@@ -2,11 +2,11 @@ import cv2
 import os
 
 # Ruta de la imagen y el video
-ruta_imagen = 'cocacola.jpg'
-ruta_video = 'cocacola2.mp4'
+ruta_imagen = 'C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/cocacola.jpg'
+ruta_video = 'C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/cocacola2.mp4'
 
 # Verificar si la imagen y el video existen
-if not os.path.exists(ruta_imagen):
+if not os.path.exists(ruta_imagen): 
     print(f"Error: La imagen no existe. Verifica la ruta: {ruta_imagen}")
     exit()
 if not os.path.exists(ruta_video):

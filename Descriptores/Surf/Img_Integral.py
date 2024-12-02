@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Cargar la imagen en escala de grises
-img = cv2.imread('fanta.jpg', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('C:/Users/marce/OneDrive/Documentos/Pythoncito/VA24/Percepcion/Descriptores/test_img/fanta.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Verificar si la imagen fue cargada correctamente
 if img is None:

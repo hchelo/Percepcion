@@ -11,7 +11,7 @@ def draw_found_faces(detected, image, color: tuple):
         )
 
 # Cargar la imagen
-image_path = "face_nor/amber.png"  # Reemplaza con la ruta a tu imagen
+image_path = "face_nor/bradd.png"  # Reemplaza con la ruta a tu imagen
 image = cv2.imread(image_path)
 
 # Verificar si la imagen se cargó correctamente
