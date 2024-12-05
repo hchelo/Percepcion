@@ -48,7 +48,7 @@ def draw_landmarks_on_image(rgb_image, detection_result):
     return annotated_image
 
 # Load the image
-image_path = "hands/toque.png"  # Update this to your image path
+image_path = "hands/todos.png"  # Update this to your image path
 img = cv2.imread(image_path)
 
 # Initialize the HandLandmarker model

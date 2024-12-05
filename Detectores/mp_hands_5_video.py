@@ -1,5 +1,12 @@
+import sys
 import cv2
 import mediapipe as mp
+# Imprimir la versión de Python
+print("Versión de Python:", sys.version)
+# Imprimir la versión de OpenCV
+print("Versión de OpenCV:", cv2.__version__)
+# Imprimir la versión de MediaPipe
+print("Versión de MediaPipe:", mp.__version__)
 
 # Inicializa MediaPipe Hands y Drawing
 mp_hands = mp.solutions.hands

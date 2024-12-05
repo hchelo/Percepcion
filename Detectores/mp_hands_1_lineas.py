@@ -18,7 +18,10 @@ with mp_hands.Hands(static_image_mode=True, max_num_hands=2, min_detection_confi
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
             # Dibuja los puntos de las manos sobre la imagen original
-            mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+            mp_drawing.draw_landmarks(
+                image, hand_landmarks, mp_hands.HAND_CONNECTIONS,
+                mp_drawing.DrawingSpec(color=(50,255,0),thickness=4,circle_radius=5),
+                mp_drawing.DrawingSpec(color=(0,50,50),thickness=3))
 
 # Muestra la imagen con las manos detectadas
 cv2.imshow("Manos detectadas", image)

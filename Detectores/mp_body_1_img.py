@@ -10,7 +10,7 @@ drawing_styles = mp_drawing.DrawingSpec(color=(0, 0, 255), thickness=2)  # Azul 
 landmark_styles = mp_drawing.DrawingSpec(color=(255, 0, 0), thickness=5)  # Rojo para los puntos clave (opcional)
 
 # Cargar la imagen
-image_path = 'lucha.png'  # Cambia esto con la ruta de tu imagen
+image_path = 'dedos/3_4.png'  # Cambia esto con la ruta de tu imagen
 image = cv2.imread(image_path)
 
 # Convierte la imagen a RGB
