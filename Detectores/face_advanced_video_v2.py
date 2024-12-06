@@ -55,7 +55,7 @@ while True:
         # Extraer y guardar la región de la cara detectada
         face = frame[y:y + height, x:x + width]
         face_filename = os.path.join(output_folder, f"frame{frame_count}_face{idx + 1}.png")
-        cv2.imwrite(face_filename, face)
+        #cv2.imwrite(face_filename, face)
         print(f"Rostro guardado en: {face_filename}")
 
         # Dibujar el rectángulo en el fotograma original
