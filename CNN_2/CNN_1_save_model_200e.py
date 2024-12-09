@@ -43,9 +43,10 @@ images = np.array(hombres_images + mujeres_images)
 labels = np.array(hombres_labels + mujeres_labels)
 
 # Normalizar las imágenes (usando media y desviación estándar)
-#mean = np.mean(images, axis=(0, 1, 2))
-#std = np.std(images, axis=(0, 1, 2))
-#images = (images - mean) / std
+images = images / 255.0
+mean = np.mean(images, axis=(0, 1, 2))
+std = np.std(images, axis=(0, 1, 2))
+images = (images - mean) / std
 
 # Convertir las etiquetas a one-hot encoding
 labels = to_categorical(labels, num_classes)
@@ -65,11 +66,9 @@ base_model.trainable = False  # Congelar capas preentrenadas
 model = Sequential([
     base_model,
     layers.GlobalAveragePooling2D(),
-    layers.Dense(64, activation='relu'),
+    layers.Dense(32, activation='relu'),
     layers.Dropout(0.5),
-    layers.Dense(16, activation='relu'),
-    layers.Dropout(0.5),
-    layers.Dense(num_classes, activation='softmax')
+    layers.Dense(2, activation='softmax')  # Capa final de salida con softmax
 ])
 
 # Resumen del modelo
@@ -100,7 +99,7 @@ test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f"Test accuracy: {test_acc}")
 
 # Guardar los pesos del modelo
-weights_path = 'model_weights_reco_200.h5'
+weights_path = 'model_weights_reco_1400.h5'
 model.save_weights(weights_path)
 print(f"Pesos guardados en {weights_path}")
 
@@ -113,7 +112,7 @@ def plot_predictions(x_test, y_test, model, num_samples=10):
     random_indices = np.random.choice(len(x_test), num_samples, replace=False)
     for index in random_indices:
         plt.figure(figsize=(5, 5))
-        plt.imshow(x_test[index])
+        plt.imshow(x_test[index], cmap='gray', vmin=0, vmax=255)
         predicted_label = predicted_labels[index]
         true_label = true_labels[index]
         plt.title(f"Predicción: {'Mujer' if predicted_label == 1 else 'Hombre'} - Real: {'Mujer' if true_label == 1 else 'Hombre'}")

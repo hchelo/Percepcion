@@ -10,7 +10,7 @@ from tensorflow.keras.utils import to_categorical
 # Reconstruir el modelo
 image_size = (128, 128)  # Tamaño correcto
 num_classes = 2  # Hombre y Mujer
-weights_path = "model_weights_reco_200.h5"  # Ruta de los pesos
+weights_path = "model_weights_reco_2030.h5"  # Ruta de los pesos
 
 # Reconstrucción del modelo
 base_model = MobileNetV2(input_shape=(128, 128, 3), include_top=False, weights='imagenet')
@@ -19,11 +19,9 @@ base_model.trainable = False  # Congelar capas base
 model = Sequential([
     base_model,
     layers.GlobalAveragePooling2D(),
-    layers.Dense(128, activation='relu'),
+    layers.Dense(32, activation='relu'),
     layers.Dropout(0.5),
-    layers.Dense(64, activation='relu'),
-    layers.Dropout(0.5),
-    layers.Dense(num_classes, activation='softmax')
+    layers.Dense(2, activation='softmax')  # Capa final de salida con softmax
 ])
 
 # Cargar los pesos

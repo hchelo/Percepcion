@@ -14,22 +14,22 @@ from mtcnn import MTCNN
 # Configuración
 image_size = (128, 128)
 num_classes = 2
-weights_path = "model_weights_reco_200.h5"
+weights_path = "model_weights_reco_1400.h5"
 class_labels = ["Male", "Female"]
 
 # Reconstrucción del modelo
 base_model = MobileNetV2(input_shape=(128, 128, 3), include_top=False, weights='imagenet')
 base_model.trainable = False
 
+# Construir el modelo
 model = Sequential([
     base_model,
     layers.GlobalAveragePooling2D(),
-    layers.Dense(64, activation='relu'),
+    layers.Dense(32, activation='relu'),
     layers.Dropout(0.5),
-    layers.Dense(16, activation='relu'),
-    layers.Dropout(0.5),
-    layers.Dense(num_classes, activation='softmax')
+    layers.Dense(2, activation='softmax')  # Capa final de salida con softmax
 ])
+
 
 
 # Cargar los pesos
@@ -43,16 +43,16 @@ detector = MTCNN()
 def preprocess_face(face_img, target_size=(128, 128)):
     face_img = cv2.resize(face_img, target_size)
     face_img = face_img / 255.0
-    mean = np.array([0.5, 0.5, 0.5])  # Ajusta si usaste otros valores
-    std = np.array([0.2, 0.2, 0.2])  # Ajusta si usaste otros valores
+    mean = np.mean(face_img, axis=(0, 1, 2))  # Ajusta si usaste otros valores
+    std = np.std(face_img, axis=(0, 1, 2))  # Ajusta si usaste otros valores
     face_img = (face_img - mean) / std
     face_img = np.expand_dims(face_img, axis=0)
     return face_img
 
 # Carpetas para procesar
 folders = {
-    "hombres": {"path": "feret_test/hombres", "label": 0},  # Cambia a tu ruta
-    "mujeres": {"path": "feret_test/mujeres", "label": 1}   # Cambia a tu ruta
+    "hombres": {"path": "Feret_test/hombres", "label": 0},  # Cambia a tu ruta
+    "mujeres": {"path": "Feret_test/mujeres", "label": 1}   # Cambia a tu ruta
 }
 
 # Inicializar listas para las etiquetas y probabilidades

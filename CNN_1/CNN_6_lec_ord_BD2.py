@@ -9,7 +9,7 @@ from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 
 # Definir el path de la base de datos
-dataset_dir = 'C:/Users/marce/OneDrive/Imágenes/FotosDocentes/'  # Cambia esto con la ruta a tu base de datos
+dataset_dir = 'C:/FotosDocentes/'  # Cambia esto con la ruta a tu base de datos
 hombres_dir = os.path.join(dataset_dir, 'hombres')
 mujeres_dir = os.path.join(dataset_dir, 'mujeres')
 

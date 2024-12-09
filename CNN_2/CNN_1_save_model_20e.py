@@ -65,7 +65,7 @@ base_model.trainable = False  # Congelar capas preentrenadas
 model = Sequential([
     base_model,
     layers.GlobalAveragePooling2D(),
-    layers.Dense(128, activation='relu'),
+    layers.Dense(16, activation='relu'),
     layers.Dropout(0.5),
     layers.Dense(num_classes, activation='softmax')
 ])
@@ -85,7 +85,7 @@ checkpoint = ModelCheckpoint('best_model.h5', monitor='val_accuracy', save_best_
 # Entrenamiento del modelo
 history = model.fit(
     x_train, y_train,
-    epochs=200,
+    epochs=50,
     batch_size=batch_size,
     validation_split=0.2,
     class_weight=class_weights,
@@ -97,7 +97,7 @@ test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f"Test accuracy: {test_acc}")
 
 # Guardar los pesos del modelo
-weights_path = 'model_weights_reco_200.h5'
+weights_path = 'model_weights_reco_2000.h5'
 model.save_weights(weights_path)
 print(f"Pesos guardados en {weights_path}")
 

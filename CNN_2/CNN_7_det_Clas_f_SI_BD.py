@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 # Reconstruir el modelo
 image_size = (128, 128)
 num_classes = 2
-weights_path = "model_weights_reco_200.h5"
+weights_path = "model_weights_reco_1400.h5"
 
 # Reconstrucción del modelo
 base_model = MobileNetV2(input_shape=(128, 128, 3), include_top=False, weights='imagenet')
@@ -20,11 +20,9 @@ base_model.trainable = False
 model = Sequential([
     base_model,
     layers.GlobalAveragePooling2D(),
-    layers.Dense(64, activation='relu'),
+    layers.Dense(32, activation='relu'),
     layers.Dropout(0.5),
-    layers.Dense(16, activation='relu'),
-    layers.Dropout(0.5),
-    layers.Dense(num_classes, activation='softmax')
+    layers.Dense(2, activation='softmax')  # Capa final de salida con softmax
 ])
 
 
