@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Iniciar la captura de video
-cap = cv2.VideoCapture('futbol.mp4')
+cap = cv2.VideoCapture('Pelota_amarilla.mp4')
 
 # Inicializar el contador de frames
 frame_count = 0

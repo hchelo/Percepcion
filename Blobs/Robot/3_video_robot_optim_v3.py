@@ -10,7 +10,7 @@ if not cap.isOpened():
     raise ValueError(f"No se pudo abrir el video desde {archivo_video}")
 
 # Definir el kernel para la erosión y dilatación
-kernel_erosion = np.ones((3, 3), np.uint8)  # Kernel de 3x3 para la erosión
+kernel_erosion = np.ones((5, 5), np.uint8)  # Kernel de 3x3 para la erosión
 celeste_upper = np.array([255, 251, 180])
 celeste_lower = np.array([207, 204, 96])  # [B, G, R]
 
