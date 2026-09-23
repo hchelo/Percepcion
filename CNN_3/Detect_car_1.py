@@ -47,13 +47,13 @@ def detect_objects(image_path):
             for i in range(int(num[0])):
                 if scores[0][i] > 0.5:  # Umbral de confianza
                     class_id = int(classes[0][i])
-                    if class_id == 3:  # ID de 'car' en COCO
-                        box = boxes[0][i] * [h, w, h, w]
-                        y_min, x_min, y_max, x_max = box.astype('int')
+                    #if class_id == 3:  # ID de 'car' en COCO
+                    box = boxes[0][i] * [h, w, h, w]
+                    y_min, x_min, y_max, x_max = box.astype('int')
 
-                        cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
-                        label = f"Car {scores[0][i]:.2f}"
-                        cv2.putText(img, label, (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                    cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
+                    label = f"D {scores[0][i]:.2f}"
+                    cv2.putText(img, label, (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
     # Mostrar resultados
     plt.figure(figsize=(12, 8))
@@ -62,4 +62,4 @@ def detect_objects(image_path):
     plt.show()
 
 # Ejecutar detección
-detect_objects("autos.jpg")
+detect_objects("oveja.png")

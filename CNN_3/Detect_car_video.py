@@ -64,7 +64,7 @@ with detection_graph.as_default():
                         cv2.putText(frame, label, (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
             # Mostrar cuadro procesado
-            cv2.imshow("Detección de Carros", frame)
+            cv2.imshow("Deteccion de Carros", frame)
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 break
 

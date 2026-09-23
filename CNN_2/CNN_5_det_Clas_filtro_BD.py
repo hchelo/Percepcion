@@ -9,7 +9,7 @@ from tensorflow.keras import layers
 # Reconstruir el modelo
 image_size = (128, 128)  # Tamaño correcto
 num_classes = 2  # Hombre y Mujer
-weights_path = "model_weights_reco_2030.h5"  # Ruta de los pesos
+weights_path = "model_weights_reco_1400.h5"  # Ruta de los pesos
 
 # Reconstrucción del modelo
 base_model = MobileNetV2(input_shape=(128, 128, 3), include_top=False, weights='imagenet')

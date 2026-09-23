@@ -119,6 +119,17 @@ with detection_graph.as_default():
                 break
 
 # Liberar recursos
+
+import sys
+import tensorflow as tf
+import torch
+
+# Imprimir las versiones
+print(f"Versión de Python: {sys.version}")
+print(f"Versión de TensorFlow: {tf.__version__}")
+print(f"Versión de PyTorch: {torch.__version__}")
+
+
 cap.release()
 out.release()
 cv2.destroyAllWindows()

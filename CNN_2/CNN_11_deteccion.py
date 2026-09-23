@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 image_size = (128, 128)
 class_labels = ["Male", "Female"]
 weights_path = "model_weights_reco_1400.h5"
-threshold = 0.56  # Umbral del 65%
+threshold = 0.57  # Umbral del 65%
 
 # Reconstrucción del modelo
 base_model = MobileNetV2(input_shape=(128, 128, 3), include_top=False, weights='imagenet')
@@ -42,7 +42,7 @@ def preprocess_face(face_img, target_size=(128, 128)):
     return face_img
 
 # Leer la imagen con múltiples rostros
-input_image_path = "Genero/presentacion.png"  # Cambia a la ruta de tu imagen
+input_image_path = "Genero/Candidatos.png"  # Cambia a la ruta de tu imagen
 image = cv2.imread(input_image_path)
 if image is None:
     print("Error: No se pudo leer la imagen.")

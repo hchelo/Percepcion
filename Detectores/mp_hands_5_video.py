@@ -13,7 +13,7 @@ mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 
 # Carga el archivo de video
-cap = cv2.VideoCapture('Dragon.mp4')  # Usa el nombre del archivo de video
+cap = cv2.VideoCapture(0)  # Usa el nombre del archivo de video
 
 # Configuración de MediaPipe Hands
 with mp_hands.Hands(

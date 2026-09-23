@@ -6,7 +6,7 @@ mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 
 # Carga la imagen
-image_path = "hands/toque.png"  # Cambia esto con tu imagen
+image_path = "hands/Messi_2.png"  # Cambia esto con tu imagen
 image = cv2.imread(image_path)
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 

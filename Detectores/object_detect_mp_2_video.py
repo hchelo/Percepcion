@@ -38,7 +38,7 @@ def visualize(image: np.ndarray, detection_result) -> np.ndarray:
     return image
 
 # Captura de video (puedes usar un video o webcam)
-video_path = "octa.mp4"  # Cambia por 0 para usar la webcam
+video_path = "cocacola.mp4"  # Cambia por 0 para usar la webcam
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():

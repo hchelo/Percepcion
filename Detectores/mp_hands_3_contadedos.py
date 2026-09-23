@@ -25,7 +25,7 @@ def count_fingers(landmarks, handedness):
     return sum(fingers)  # Retorna el número de dedos extendidos
 
 # Ruta de la imagen
-image_path = 'dedos/5_8.png'  # Reemplaza con la ruta de tu imagen
+image_path = 'hands/Messi_2.png'  # Reemplaza con la ruta de tu imagen
 
 # Cargar la imagen
 image = cv2.imread(image_path)

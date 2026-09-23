@@ -4,7 +4,7 @@ import subprocess
 subprocess.run("set HYDRA_FULL_ERROR=1", shell=True, check=True)
 
 # Ejecutar el comando YOLO
-subprocess.run("yolo task=detect mode=predict model=yolov8n.pt source=futbolin.jpg", shell=True, check=True)
+subprocess.run("yolo task=detect mode=predict model=yolov8n.pt source=YOLO/futbolin.jpg", shell=True, check=True)
 
 import os
 from datetime import datetime

@@ -7,7 +7,7 @@ mp_selfie_segmentation = mp.solutions.selfie_segmentation
 segmentation = mp_selfie_segmentation.SelfieSegmentation(model_selection=1)
 
 # Cargar el video
-cap = cv2.VideoCapture("wici.mp4")
+cap = cv2.VideoCapture("Dragon.mp4")
 
 while cap.isOpened():
     ret, frame = cap.read()

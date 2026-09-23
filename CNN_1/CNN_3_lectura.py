@@ -60,7 +60,7 @@ model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(num_classes, activation='softmax'))  # softmax para clasificación multiclase
 
 # Cargar los pesos del archivo 'model_weights.h5'
-model.load_weights('model_weights.h5')
+model.load_weights('model_weights_2.h5')
 
 # Evaluar el modelo
 predictions = model.predict(images)

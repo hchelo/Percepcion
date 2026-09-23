@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 # Reconstruir el modelo
 image_size = (128, 128)
 num_classes = 2
-weights_path = "model_weights_reco_2030.h5"
+weights_path = "model_weights_reco_1400.h5"
 
 # Reconstrucción del modelo
 base_model = MobileNetV2(input_shape=(128, 128, 3), include_top=False, weights='imagenet')

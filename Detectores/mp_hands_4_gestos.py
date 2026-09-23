@@ -17,7 +17,7 @@ options = vision.GestureRecognizerOptions(base_options=base_options)
 recognizer = vision.GestureRecognizer.create_from_options(options)
 
 # Cargar la imagen que quieres procesar
-image_path = 'gestos/person_victory.png'  # Reemplaza con la ruta de tu imagen
+image_path = 'gestos/person_up.png'  # Reemplaza con la ruta de tu imagen
 image = cv2.imread(image_path)
 
 if image is None:
